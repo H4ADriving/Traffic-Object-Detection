@@ -1,0 +1,10 @@
+img_size: 416
+names:
+- cars
+- humans
+- motors
+- signs
+- animals
+nc: 5
+train: C:\Users\user\Desktop\ObjectDetectionProject\piplines\pipeline4\train
+val: C:\Users\user\Desktop\ObjectDetectionProject\piplines\pipeline4\valid
