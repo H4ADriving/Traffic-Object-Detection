@@ -1,0 +1,1186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+header {
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  flex-wrap: wrap; /* Ajoutez cette ligne */
+}
+
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    position: relative;
+    margin: 0 25px;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none; /* Ajoutez ceci pour supprimer la décoration du texte par défaut */
+    color:#000; /* Ajoutez ceci pour définir la couleur du texte */
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute; /* Modifiez ceci pour utiliser position absolute */
+    bottom: -5px; /* Ajustez ceci pour l'espacement sous la ligne */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#3a6cf4;
+    transition: width 0.3s; /* Modifiez ceci pour définir la transition sur la largeur seulement */
+}
+
+.navigation a:hover::after,
+.navigation a.active::after{
+    width: 100%; /* Modifiez ceci pour ajuster la largeur au survol */
+}
+
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("unnamed.webp") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex-wrap: wrap; /* Ajoutez cette ligne */
+}
+
+
+.main h2 {
+    color: #000;
+    font-size: 1.4em;
+    font-weight: 200;
+}
+
+/* Animation de fondu enchaîné pour les titres h2 */
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Appliquer l'animation aux titres h2 */
+  .main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00103b;
+    font-size: 2.5em;
+    font-weight: 700;
+    animation: fadeInOut 3s ease-in-out infinite; /* Répéter l'animation indéfiniment */
+  }
+  
+  /* Animation de fondu enchaîné pour les titres h3 */
+  @keyframes fadeInOutH3 {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Appliquer l'animation aux titres h3 */
+  .main h3 {
+    color: #3a6cf4;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    animation: fadeInOutH3 3s ease-in-out infinite; /* Répéter l'animation indéfiniment */
+  }
+  
+  
+  
+  
+
+.main-btn {
+    color: #fff;
+    background-color: #0a49f6;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 24px;
+    margin-left: 15px;
+    transition: color 0.3s; /* Ajoutez une transition de couleur pour une animation fluide */
+}
+
+.social-icons a:hover {
+    color: #0a49f6; /* Définissez la couleur au survol sur les éléments a */
+}
+
+
+/* Animation de fondu enchaîné pour la classe .title */
+@keyframes fadeInOutTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Appliquer l'animation à la classe .title */
+  .title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    animation: fadeInOutTitle 3s ease-in-out infinite; /* Répéter l'animation indéfiniment */
+  }
+  
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.card {
+    background-color: #fcfcfc;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 20px;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.cards .content {
+    display: flex; /* Afficher les cartes en ligne */
+    flex-wrap: wrap; /* Permettre l'enroulement sur plusieurs lignes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+}
+
+.cards .card {
+    flex: 1; /* Ajuster la largeur des cartes pour qu'elles occupent l'espace disponible */
+    margin: 10px; /* Ajouter un espacement entre les cartes */
+    max-width: 500px; /* Définir une largeur maximale pour les cartes */
+}
+
+
+.info {
+    text-align: center;
+}
+
+/* Animation de fondu enchaîné pour la classe .info h3 */
+@keyframes fadeInOutInfo {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  /* Appliquer l'animation à la classe .info h3 */
+  .info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+    animation: fadeInOutInfo 3s ease-in-out infinite; /* Répéter l'animation indéfiniment */
+  }
+  
+
+.projects {
+    background-color: #000016;
+    
+}
+
+.projects .content{
+    margin-top: 30px;
+    
+}
+
+.project-card {
+    
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+   transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+ }
+
+.project-image img{
+    width: 100%
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #fff;
+}
+
+.contact .info p {
+    font-size: 1.5em;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ajoutez cette ligne */
+}
+
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+/* Style du conteneur principal */
+.cards1 {
+  /* Couleur de fond */
+  padding: 50px 0; /* Espace intérieur haut et bas */
+  flex-wrap: wrap; 
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    background-color: #1f4ac9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+
+/* Style de la vidéo */
+#videoFeed {
+  width: 100%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Style des contrôles de la caméra */
+.camera-controls {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  margin-top: 50px;
+}
+
+/* Style des boutons */
+button {
+  margin: 10px; /* Ajoute une marge autour des boutons pour l'espace */
+  padding: 15px 30px; /* Augmentation de la taille des boutons */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #143076;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  flex-wrap: wrap; 
+}
+
+
+button:hover {
+    background-color: #627392;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Style des autres accessoires */
+.accessories {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    flex-wrap: wrap; 
+}
+
+.accessories h4 {
+    margin-bottom: 20px;
+}
+
+.accessories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.accessories ul li {
+    margin-bottom: 10px;
+}
+
+.accessories ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.accessories ul li a:hover {
+    color: #ccc;
+}
+
+/* Style des autres éléments accessoires */
+.other-accessories {
+    margin-top: 20px;
+}
+
+.other-accessories h4 {
+    margin-bottom: 10px;
+}
+
+.other-accessories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.other-accessories ul li {
+    margin-bottom: 10px;
+}
+
+.other-accessories ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.other-accessories ul li a:hover {
+    color: #ccc;
+}
+
+/* Style pour d'autres éléments ajoutés */
+.additional-items {
+    margin-top: 40px;
+}
+
+.additional-items h4 {
+    margin-bottom: 20px;
+}
+
+.additional-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-items ul li {
+    margin-bottom: 10px;
+}
+
+.additional-items ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.additional-items ul li a:hover {
+    color: #ccc;
+}
+
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+
+
+/* Styles pour la section de pied de page */
+.footer {
+  background-color: #1f4ac9;
+  color: #fff;
+  padding: 60px;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+  flex-wrap: wrap; 
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+  flex-wrap: wrap; 
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+  
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap; 
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+  flex-wrap: wrap; 
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+  flex-wrap: wrap; 
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+  flex-wrap: wrap; 
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+  color: #fff;
+}
+
+/* Styles pour les accessoires */
+.accessories {
+  margin-top: 40px;
+  flex-wrap: wrap;
+  flex-wrap: wrap;  
+}
+
+.accessories h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.accessories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accessories ul li {
+  margin-bottom: 10px;
+}
+
+.accessories ul li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.accessories ul li a:hover {
+  color: #fff;
+}
+
+.accessories p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+.footer-col.accessories h4 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-col.accessories ul.links li {
+    margin-bottom: 5px;
+}
+
+.footer-col.accessories ul.links li a {
+    color: #00103b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col.accessories ul.links li a:hover {
+    color: #000;
+}
+
+.footer-col.accessories p {
+    color: #fff6f6;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.footer-col.accessories .video {
+    margin-top: 20px;
+}
+
+.footer-col.accessories .related-articles {
+    margin-top: 30px;
+}
+
+.footer-col.accessories .related-articles h4 {
+    color: #a19e9e;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-col.accessories .related-articles ul.links li {
+    margin-bottom: 5px;
+}
+
+.footer-col.accessories .related-articles ul.links li a {
+    color: #fffbfb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col.accessories .related-articles ul.links li a:hover {
+    color: #000;
+}
+#equipe {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#equipe h2 {
+    color: #333;
+    font-size: 2rem;
+}
+
+#equipe p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Styliser les membres de l'équipe */
+.member {
+    margin-top: 30px;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.member p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Animation de survol */
+.member img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.container1 {
+  height: 500px;
+  display: flex;
+  min-width: 600px;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -55px;
+  background-color: transparent;
+  flex-wrap: wrap; 
+  
+
+}
+
+.icon-image {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  margin: 0 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background: #fff;
+  flex-wrap: wrap; 
+}
+
+.icon-image .icon img {
+  position: absolute;
+  height: 95%;
+  width: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0396FF;
+}
+
+.icon-image::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+}
+
+.icon-image .hover-image {
+  position: absolute;
+  height: 350px;
+  width: 300px;
+  bottom: 100px;
+  left: 50%;
+  z-index: 0;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  pointer-events: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, z-index 0s, left 0.5s ease;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.icon-image:hover .hover-image {
+  left: -200px;
+  z-index: 12;
+  transform: translateX(80px);
+  transition: left 0.5s ease, z-index 0s, transform 0.5s ease;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.hover-image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 25px;
+}
+
+.hover-image .content {
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  padding: 0 10px;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  left: 50%;
+  bottom: -7px;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: -1;
+}
+
+.content .details {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.icon-image:hover .details {
+  transition: all 0.5s ease;
+  transition-delay: 0.9s;
+  opacity: 1;
+  transform: translateY(4px);
+  pointer-events: auto;
+}
+
+.details::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  left: 50%;
+  bottom: -15px;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: -1;
+}
+
+.content .details .name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content .details .job {
+  font-size: 17px;
+  color: #0396FF;
+  margin: -3px 0 5px 0;
+}
+
+.content .details a:hover {
+  color: #0396FF;
+}
+
+.container .last .hover-image {
+  transition: none;
+}
+
+.container .last:hover .hover-image {
+  transition: 0;
+}
+
+.last:hover .details {
+  transition-delay: 0s;
+}
+
+/* Animation lorsqu'on survole le champ de téléchargement */
+@keyframes border-pulse {
+  0% {
+    border-color: #14c45b;
+  }
+  50% {
+    border-color: #14c45b;
+  }
+  100% {
+    border-color: #ccc;
+  }
+}
+
+input[type="file"] {
+  border: 4px solid #f7f5f5; /* Bordure grise */
+  padding: 10px; /* Espacement intérieur */
+  border-radius: 7px; /* Coins arrondis */
+  font-size: 18px; /* Taille de la police */
+  transition: border-color 0.3s ease; /* Transition fluide de la couleur de la bordure */
+  animation: border-pulse 2s infinite; /* Animation pour le focus */
+}
+.projects h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px; /* Ajoute de l'espace sous le titre */
+  animation: colorTransition 5s infinite alternate; /* Ajoute l'animation colorTransition */
+}
+
+@keyframes colorTransition {
+  from {
+      color: #333; /* Couleur de départ */
+  }
+  to {
+      color: #14c45b; /* Couleur d'arrivée */
+  }
+}
+
+
+
+@media (max-width:1023px){
+  header{
+      padding: 12px 20px;
+  }
+
+  .navigation a{
+      padding-left: 10px;
+  }
+
+  .title{
+      font-size: 1.8em;
+  }
+
+  section{
+      padding: 80px 20px;
+  }
+
+  .main-content h2{
+      font-size: 1em;
+  }
+
+  .main-content h3{
+      font-size: 1.6em;
+  }
+
+  .content{
+      flex-direction: column;
+      align-items: center;
+  }
+
+}
+
+
+
+
+
+@media (max-width:641px){
+  body{
+      font-size: 12px;
+  }
+
+  .main-content h2{
+      font-size: 0.8em;
+  }
+
+  .main-content h3{
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width:300px){
+  body{
+      font-size: 10px;
+   
+  }
+}
+@media (max-width: 767px) {
+  .container1 {
+    display: flex;
+    flex-direction: column; /* Change la direction de la disposition en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  .icon-image {
+    width: 100%; /* Occupe la largeur totale */
+    margin-bottom: 20px; /* Ajoute de l'espace entre les éléments */
+  }
+
+  .icon {
+    display: flex;
+    
+    justify-content: center;
+  }
+
+  .icon img {
+    max-width: auto; /* Réduit légèrement la largeur de l'image */
+    height: auto;
+    border-radius: auto; /* Arrondit les images */
+    
+  }
+
+  .hover-image {
+    display: none; /* Masque l'élément de survol sur les petits écrans */
+  }
+
+  .details {
+    text-align: center; /* Centre le texte */
+    margin-top: 10px; /* Ajoute de l'espace au-dessus des détails */
+  }
+
+  .name {
+    font-size: 1.1em; /* Légèrement réduire la taille du nom */
+    margin-bottom: 3px; /* Réduire l'espace en bas du nom */
+  }
+
+  .job {
+    font-size: 0.8em; /* Réduire légèrement la taille du travail */
+  }
+}
+
+
+
+
+@media (max-width: 1023px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 20px; /* Réduit l'espace entre les colonnes */
+    text-align: center; /* Centre le contenu des colonnes */
+  }
+
+  .footer-col h4 {
+    font-size: 1.1em; /* Légèrement réduire la taille du titre */
+    margin-bottom: 10px; /* Réduit l'espace en bas du titre */
+  }
+
+  .footer-col ul.links li {
+    margin-bottom: 8px; /* Réduit l'espace entre les éléments de la liste */
+  }
+
+  .footer-col p {
+    font-size: 0.9em;
+    margin-bottom: 10px; /* Réduit l'espace en bas du paragraphe */
+  }
+
+  .footer-col form {
+    margin-bottom: 10px; /* Réduit l'espace en bas du formulaire */
+  }
+
+  .footer-col .video {
+    margin-top: 15px; /* Réduit l'espace au-dessus de la vidéo */
+  }
+
+  .footer-col .related-articles {
+    margin-top: 25px; /* Réduit l'espace au-dessus des articles connexes */
+  }
+}
+@media (max-width: 767px) {
+  .footer-col .video {
+    margin-top: 10px; /* Réduit l'espace au-dessus de la vidéo */
+  }
+  
+  .footer-col .video iframe {
+    width: 100%; /* La vidéo occupe la largeur totale du conteneur */
+    height: auto; /* La hauteur s'ajuste automatiquement pour maintenir les proportions */
+  }
+}
+
+
+
+
+
+
+
+
+

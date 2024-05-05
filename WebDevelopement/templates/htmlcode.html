@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Détection d'Objets pour Voitures Autonomes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='exemple.css') }}">
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">H4A Driving</a>
+    <nav class="navigation">
+        <a href="#services" class="active">Services</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="#equipe">Notre Équipe</a>
+    </nav>
+</header>
+
+<section class="main">
+    <div>
+        <h2>Bienvenue sur H4A Driving<br><span>Votre Assistant pour la Conduite Autonome</span></h2>
+        <h3>Nous vous aidons à visualiser et à comprendre l'environnement routier.</h3>
+        <a href="#projects" class="main-btn">Voir nos projets</a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/hamza-kholti-075288209"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/hamza-kholti-075288209"><i class="fab fa-github"></i></a>
+            <a href="lien_vers_votre_profil_facebook"><i class="fab fa-facebook"></i></a>
+            <a href="lien_vers_votre_profil_instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+<section class="projects" id="equipe">
+    <h2>Notre Équipe</h2>
+    <div class="container1">
+        <div class="icon-image">
+            <div class="icon">
+                <img src="static/ANOUAR.jpg" alt="" />
+            </div>
+            <div class="hover-image one">
+                <div class="img">
+                    <img src="static/ANOUAR.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="name">ANOUAR</div>
+                        <div class="job">AI engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-image">
+            <div class="icon">
+                <img src="static/AYA1.jpg" alt="" />
+            </div>
+            <div class="hover-image one">
+                <div class="img">
+                    <img src="static/AYA1.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="name">AYA SALIM</div>
+                        <div class="job">Data Scientist</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-image">
+            <div class="icon">
+                <img src="static/HAMZA.jpg" alt="" />
+            </div>
+            <div class="hover-image one">
+                <div class="img">
+                    <img src="static/HAMZA.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="name">HAMZA</div>
+                        <div class="job">AI engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-image">
+            <div class="icon">
+                <img src="static/AHLAM.jpg" alt="" />
+            </div>
+            <div class="hover-image one">
+                <div class="img">
+                    <img src="static/AHLAM.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="name">AHLAM EL GAMANI</div>
+                        <div class="job">AI engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-image last">
+            <div class="icon">
+                <img src="static/AyA.jpg" alt="" />
+            </div>
+            <div class="hover-image one">
+                <div class="img">
+                    <img src="static/AyA.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="name">AYA ELHAOUDAR</div>
+                        <div class="job">AI engineer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="cards" id="services">
+    <h2 class="title">Services</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="info">
+                <h3>Détection d'Objets en Temps Réel</h3>
+                <p>Analyse de l'environnement routier pour détecter les véhicules, les piétons et les obstacles en temps réel.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="info">
+                <h3>Intelligence Artificielle Avancée</h3>
+                <p>Utilisation de réseaux neuronaux profonds pour une détection précise et une prise de décision autonome.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="info">
+                <h3>Analyse de Données</h3>
+                <p>Visualisation et analyse approfondie des données de détection pour améliorer les performances du système.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cards1" id="projects">
+    <div class="container" id="projects">
+        <h1>Détection d'Objets en Temps Réel</h1>
+        <div class="camera-controls">
+            <button id="startButton"><i class="fas fa-eye"></i> Démarrer Caméra</button>
+            <button id="stopButton"><i class="fas fa-stop"></i> Arrêter Caméra</button>
+            <img id="videoFeed" src="">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Télécharger une image</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <button type="submit">Télécharger</button>
+        </form>
+        <br>
+        <form action="/download_result" method="get">
+            <button type="submit">Télécharger l'image annotée</button>
+        </form>
+    </div>
+    
+    
+</section>
+
+<section class="cards contact" id="contact">
+    <h2 class="title">Travaillons Ensemble</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>Téléphone</h3>
+                <p>+20122222222</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p>business@self-drive.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="footer-row">
+        <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+                <li><a href="#">À Propos de Nous</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Explorer</h4>
+            <ul class="links">
+                <li><a href="#">Derniers Projets</a></li>
+                <li><a href="#">Conceptions Populaires</a></li>
+                <li><a href="#">Compétences Techniques</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Légal</h4>
+            <ul class="links">
+                <li><a href="#">Politique de Confidentialité</a></li>
+                <li><a href="#">Conditions d'Utilisation</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>
+                Abonnez-vous à notre newsletter pour recevoir des actualités, des mises à jour et des offres exclusives.
+            </p>
+            <form action="#">
+                <input type="text" placeholder="Votre adresse email" required>
+                <button type="submit">S'ABONNER</button>
+            </form>
+            <div class="icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+        <!-- Nouvelle section pour les accessoires -->
+        <div class="footer-col accessories">
+            <h4>Nos Produits</h4>
+            <ul class="links">
+                <li><a href="#">Systèmes de Navigation Autonome</a></li>
+                <li><a href="#">Caméras de Surveillance Intelligente</a></li>
+                <li><a href="#">Capteurs de Distance</a></li>
+                <li><a href="#">Logiciels de Conduite Autonome</a></li>
+            </ul>
+            <p>Découvrez notre gamme de produits pour une conduite autonome sûre et efficace.</p>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/__EoOvVkEMo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="related-articles">
+                <h4>Articles Connexes</h4>
+                <ul class="links">
+                    <li><a href="#">Les avantages de la conduite autonome</a></li>
+                    <li><a href="#">Comment fonctionne la détection d'objets en temps réel</a></li>
+                    <li><a href="#">Les défis de la mise en œuvre de l'intelligence artificielle dans les véhicules autonomes</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='camera.js') }}"></script>
+</body>
+</html>
