@@ -54,5 +54,5 @@ The YOLOv8 model from Ultralytics was utilized for object detection tasks in thi
 ## Annexes
 For additional information, including detailed datasets and project documentation, please visit the provided links.
 
-## demonstrative video :
+## Demonstrative video :
 https://github.com/H4ADriving/Traffic-Object-Detection/assets/155930494/c2f3eff8-6271-46c6-b25b-361d753ff698
