@@ -49,7 +49,7 @@ You can access the dataset used for this project [here](https://drive.google.com
 - **Cars Dataset:** [RoboFlow - Cars Detecting and How Many](https://universe.roboflow.com/cars-fjcrk/cars-detecting-and-how-many)
 
 ## Model
-The YOLOv8 model from Ultralytics was utilized for object detection tasks in this project. You can find more information about the YOLOv5 model [here](https://docs.ultralytics.com/).
+The YOLOv8 model from Ultralytics was utilized for object detection tasks in this project. You can find more information about the YOLOv8 model [here](https://docs.ultralytics.com/).
 
 ## Annexes
 For additional information, including detailed datasets and project documentation, please visit the provided links.
