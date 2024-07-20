@@ -14,7 +14,7 @@ To utilize the features developed in this project, follow these steps:
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/H4ADriving/Traffic-Object-Detection.git
     ```
 
 2. Navigate to the project directory:
